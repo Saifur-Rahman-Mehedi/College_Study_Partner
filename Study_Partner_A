@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+        <title>Registration</title>
+        <style>
+
+            body {
+                font-family: 'Montserrat', sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background-color: #F0F2F5;
+            }
+
+            .container {
+                max-width: 960px;
+                margin: auto;
+                padding: 20px;
+                width: 100%;
+                background: white;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+
+            h1 {
+                font-size: 36px;
+                color: #993800;
+                margin-bottom: 45px;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                font-weight: 600;
+                text-align: center;
+            }
+
+            h2 {
+                font-size: 32px;
+                color: #000;
+                margin-bottom: 16px;
+                text-align: center;
+                margin-top: auto;
+                margin-bottom: 20px;
+            }
+
+            form {
+                padding: 20px;
+                background: white;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                margin: 20px 0;
+            }
+
+            input, textarea, button {
+                width: calc(100% - 22px); 
+                padding: 10px;
+                margin-bottom: 20px;
+                border-radius: 4px;
+                border: 1px solid #ddd;
+                font-size: 18px;
+                box-sizing: border-box; 
+            }
+
+            button {
+                background-color: #993800; 
+                color: white;
+                border: none;
+                cursor: pointer;
+                font-size: x-large;
+                font-weight: bold;
+                padding: 10.5px 9.5px; 
+            }
+
+            button:hover {
+                background-color: #872a00;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="container">
+            <h1>COLLEGE STUDY PARTNER</h1>
+            <form id="userProfileForm" onsubmit="return validateEmail()">
+                <h2>REGISTRATION</h2>
+                <input type="email" id="emailInput" placeholder="Please enter your college or university email (ending in .edu)" required pattern=".*\.edu$" title="Please enter an email address ending in .edu" />
+                <button type="submit">Find Study Partner</button>
+            </form>
+        </div>
+        
+        <script>
+
+            function validateEmail() {
+                var emailInput = document.getElementById('emailInput');
+                var pattern = /.+\.edu$/; 
+                if (!pattern.test(emailInput.value)) {
+                    emailInput.classList.add('error');
+                    return false; 
+                } else {
+                    emailInput.classList.remove('error');
+                    window.location.href = 'file:///c:/Users/smehedi/Downloads/Study_Partner_B';
+                    return false; 
+                }
+            }
+
+            document.getElementById('emailInput').addEventListener('input', function() {
+                this.classList.remove('error');
+            });
+
+        </script>
+
+    </body>
+
+</html>

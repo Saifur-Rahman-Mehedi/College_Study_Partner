@@ -1,0 +1,53 @@
+{
+  "name": "study-partner",
+  "version": "1.0.0",
+  "description": "A platform connecting college students with study partners for each semester, considering their current courses, availability, and additional informations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "study",
+    "partner",
+    "college",
+    "semester",
+    "courses",
+    "friend",
+    "bumble",
+    "tinder",
+    "facebook",
+    "instagram",
+    "group",
+    "me",
+    "patio",
+    "Canvas",
+    "Chegg",
+    "Grammarly",
+    "Quizlet",
+    "match",
+    "find",
+    "Find",
+    "Study",
+    "Parner",
+    "Matched",
+    "Study",
+    "Partner",
+    "university",
+    "stony",
+    "brook",
+    "university"
+  ],
+  "author": "Saifur Rahman Mehedi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cloudinary": "^2.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.1.1",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.1"
+  }
+}

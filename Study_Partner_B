@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">  
+        <title>Create Your Profile</title>
+        
+        <style>
+            
+            body {
+                font-family: 'Montserrat', sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background-color: #F0F2F5;
+            }
+
+            .container {
+                max-width: 960px;
+                margin: auto;
+                padding: 20px;
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 36px;
+                color: #993800;
+                margin-bottom: 50px;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                font-weight: 600;
+                text-align: center;
+            }
+
+            h2 {
+                font-size: 24px;
+                color: #000;
+                margin: 20px 0 10px;
+            }
+
+            form {
+                padding: 20px;
+                background: white;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                margin: 20px 0;
+            }
+
+            input, select, textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border-radius: 4px;
+                border: 1px solid #ddd;
+                font-size: 18px;
+            }
+
+            .weekly-schedule {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+            }
+
+            .day {
+                margin-bottom: 20px; 
+                align-items: center;
+            }
+
+            .time-slots {
+                display: flex;
+                justify-content: start;
+            }
+
+            .time-slot {
+                padding: 5px 10px;
+                margin: 3.33px;
+                background-color: #fff;
+                border: 1px solid #000; 
+                cursor: pointer;
+                text-align: center; 
+                line-height: 21px; 
+            }
+
+            .time-slot:hover {
+                background-color: #e9e9e9;
+            }
+
+            .time-slot.selected {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            .textarea-container {
+                position: relative;
+                margin-bottom: 18px;
+                width: 100%;
+            }
+
+            #bioTextarea {
+                width: 100%; 
+                padding: 10px; 
+                padding-bottom: 35px; 
+                box-sizing: border-box; 
+            }
+
+            .word-count {
+                position: absolute;
+                bottom: 15px; 
+                right: 20px;
+                background-color: transparent;
+                color: #666;
+                font-size: 20px;
+                font-weight: 300; 
+                font-style: italic; 
+            }
+
+            form {
+                padding: 20px;
+                background: white;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                margin: 20px 0;
+            }
+
+            input, select, textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border-radius: 4px;
+                border: 1px solid #ddd;
+                font-size: 24px; 
+            }
+
+            button {
+                width: 100%;
+                padding: 12px;
+                background-color: #993800; 
+                color: white;
+                border: none;
+                cursor: pointer;
+                font-size: x-large;
+                font-weight: bold;
+                border-radius: 7px;
+            }
+
+            button:hover {
+                background-color: darken(#993800, 10%);
+            } 
+
+            .courseInputContainer {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .courseInputContainer input {
+                flex: 0 0 85%;
+            }        
+
+            .addCourseButton {
+                padding: 7px; 
+                font-size: 18px; 
+                background-color: #d3d3d3;
+                color: #000000;
+                border: 1px solid #000; 
+                border-radius: 22px;
+                margin-left: auto;
+                margin-bottom: auto;
+                cursor: pointer;
+                width: 9%; 
+                height: 51px; 
+            }
+
+            .addCourseButton:hover {
+                background-color: #BEBEBE;
+            }
+
+            @media (max-width: 600px) {
+                .day {
+                    width: 100%;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+            <div class="container">
+
+                <h1>Create Your Profile</h1>
+
+                <form id="userProfileForm">
+                    <h2>Profile Picture</h2>
+                    <label><input type="file" accept="image/*"></label>
+
+                    <h2>Name</h2>
+                    <input type="text" placeholder="Your Name" required />
+
+                    <h2>Major</h2>
+                        <select required>
+                            <option value="">Select Your Major</option>
+                            <option value="accounting">Accounting</option>
+                            <option value="africana_studies">Africana Studies</option>
+                            <option value="anthropology">Anthropology</option>
+                            <option value="applied_mathematics_statistics">Applied Mathematics & Statistics</option>
+                            <option value="art_history_criticism">Art History & Criticism</option>
+                            <option value="asian_asian_american_studies">Asian & Asian American Studies</option>
+                            <option value="astronomy_planetary_sciences">Astronomy/Planetary Sciences</option>
+                            <option value="atmospheric_oceanic_sciences">Atmospheric and Oceanic Sciences</option>
+                            <option value="biochemistry">Biochemistry</option>
+                            <option value="biology">Biology</option>
+                            <option value="biomaterials">Biomaterials</option>
+                            <option value="biomedical_engineering">Biomedical Engineering</option>
+                            <option value="business_management">Business Management</option>
+                            <option value="chemical_molecular_engineering">Chemical & Molecular Engineering</option>
+                            <option value="chemistry">Chemistry</option>
+                            <option value="china_studies">China Studies</option>
+                            <option value="civil_engineering">Civil Engineering</option>
+                            <option value="clinical_laboratory_sciences">Clinical Laboratory Sciences</option>
+                            <option value="coastal_environmental_studies">Coastal Environmental Studies</option>
+                            <option value="communication">Communication</option>
+                            <option value="computer_engineering">Computer Engineering</option>
+                            <option value="computer_science">Computer Science</option>
+                            <option value="creative_writing_literature">Creative Writing & Literature</option>
+                            <option value="digital_arts">Digital Arts</option>
+                            <option value="earth_space_sciences">Earth & Space Sciences</option>
+                            <option value="economics">Economics</option>
+                            <option value="education">Education (Teacher Certification)</option>
+                            <option value="electrical_engineering">Electrical Engineering</option>
+                            <option value="energy_science_technology_policy">Energy Science, Technology & Policy</option>
+                            <option value="engineering_chemistry">Engineering Chemistry</option>
+                            <option value="engineering_science">Engineering Science</option>
+                            <option value="english">English</option>
+                            <option value="environmental_design_policy_planning">Environmental Design, Policy & Planning</option>
+                            <option value="environmental_engineering">Environmental Engineering</option>
+                            <option value="environmental_studies">Environmental Studies</option>
+                            <option value="ethnomusicology">Ethnomusicology</option>
+                            <option value="film_screen_studies">Film and Screen Studies</option>
+                            <option value="filmmaking">Filmmaking</option>
+                            <option value="french_language_literature">French Language and Literature</option>
+                            <option value="geology">Geology</option>
+                            <option value="geospatial_science">Geospatial Science</option>
+                            <option value="globalization_studies_international_relations">Globalization Studies & International Relations</option>
+                            <option value="health_sciences">Health Sciences</option>
+                            <option value="health_medicine_society">Health, Medicine & Society</option>
+                            <option value="hellenic_studies">Hellenic Studies</option>
+                            <option value="history">History</option>
+                            <option value="history_health_science_environment">History of Health, Science & the Environment</option>
+                            <option value="human_evolutionary_biology">Human Evolutionary Biology</option>
+                            <option value="information_systems">Information Systems</option>
+                            <option value="italian_american_studies">Italian American Studies</option>
+                            <option value="italian_studies">Italian Studies</option>
+                            <option value="japanese_studies">Japanese Studies</option>
+                            <option value="journalism">Journalism</option>
+                            <option value="korean_studies">Korean Studies</option>
+                            <option value="latin_american_caribbean_studies">Latin American & Caribbean Studies</option>
+                            <option value="linguistics">Linguistics</option>
+                            <option value="manufacturing_engineering">Manufacturing Engineering</option>
+                            <option value="marine_sciences">Marine Sciences</option>
+                            <option value="marine_vertebrate_biology">Marine Vertebrate Biology</option>
+                            <option value="mass_communication">Mass Communication</option>
+                            <option value="materials_science">Materials Science</option>
+                            <option value="mathematics">Mathematics</option>
+                            <option value="mechanical_engineering">Mechanical Engineering</option>
+                            <option value="media_arts">Media Arts</option>
+                            <option value="media_art_culture">Media/Art/Culture</option>
+                            <option value="middle_eastern_studies">Middle Eastern Studies</option>
+                            <option value="multidisciplinary_studies">Multidisciplinary Studies</option>
+                            <option value="music">Music</option>
+                            <option value="nursing">Nursing</option>
+                            <option value="philosophy">Philosophy</option>
+                            <option value="physics">Physics</option>
+                            <option value="political_science">Political Science</option>
+                            <option value="professional_writing">Professional Writing</option>
+                            <option value="psychology">Psychology</option>
+                            <option value="religious_studies">Religious Studies</option>
+                            <option value="respiratory_care">Respiratory Care</option>
+                            <option value="russian_studies">Russian Studies</option>
+                            <option value="social_work">Social Work</option>
+                            <option value="sociology">Sociology</option>
+                            <option value="south_asian_studies">South Asian Studies</option>
+                            <option value="spanish_language_literature">Spanish Language and Literature</option>
+                            <option value="studio_art">Studio Art</option>
+                            <option value="sustainability_studies">Sustainability Studies</option>
+                            <option value="technological_systems_management">Technological Systems Management</option>
+                            <option value="theatre_arts">Theatre Arts</option>
+                            <option value="womens_gender_studies">Women's and Gender Studies</option>
+                            <option value="writing_rhetoric">Writing & Rhetoric</option>
+                    </select>
+
+                    <h2>Year in School</h2>
+                        <select required>
+                            <option value="">Select Year</option>
+                            <option value="freshman">Freshman</option>
+                            <option value="sophomore">Sophomore</option>
+                            <option value="junior">Junior</option>
+                            <option value="senior">Senior</option>
+                            <option value="graduate">Graduate Student</option>
+                        </select>
+
+                    <h2>Spring 2024 Courses</h2>
+                        <p>Please list the courses you are taking this semester (e.g., CSE 101, PHY 131).</p>
+                        <div id="courseInputs">
+                            <div class="courseInputContainer">
+                                <input type="text" placeholder="Course 1 (e.g., CSE 101)" name="course1" />
+                                <button type="button" class="addCourseButton">+</button>
+                            </div>
+                        </div>
+                
+                    <h2>Preferred Study Time</h2>
+                        <div class="weekly-schedule">
+                            <div class="day">
+                                <h3>Monday</h3>
+                                <div class="time-slots">
+                                    <div class="time-slot" data-hour="7am">8-10 AM</div>
+                                    <div class="time-slot" data-hour="8am">10-12 PM</div>
+                                    <div class="time-slot" data-hour="9am">12-2 PM</div>
+                                    <div class="time-slot" data-hour="10am">2-4 PM</div>
+                                    <div class="time-slot" data-hour="11am">4-6 PM</div>
+                                    <div class="time-slot" data-hour="12pm">6-8 PM</div>
+                                    <div class="time-slot" data-hour="1pm">8-10 PM</div>
+                                    <div class="time-slot" data-hour="2pm">10-12 PM</div>
+                                </div>
+                            </div>
+                            <div class="day">
+                                <h3>Tuesday</h3>
+                                <div class="time-slots">
+                                    <div class="time-slot" data-hour="7am">8-10 AM</div>
+                                    <div class="time-slot" data-hour="8am">10-12 PM</div>
+                                    <div class="time-slot" data-hour="9am">12-2 PM</div>
+                                    <div class="time-slot" data-hour="10am">2-4 PM</div>
+                                    <div class="time-slot" data-hour="11am">4-6 PM</div>
+                                    <div class="time-slot" data-hour="12pm">6-8 PM</div>
+                                    <div class="time-slot" data-hour="1pm">8-10 PM</div>
+                                    <div class="time-slot" data-hour="2pm">10-12 PM</div>
+                                </div>
+                            </div>
+                            <div class="day">
+                                <h3>Wednesday</h3>
+                                <div class="time-slots">
+                                    <div class="time-slot" data-hour="7am">8-10 AM</div>
+                                    <div class="time-slot" data-hour="8am">10-12 PM</div>
+                                    <div class="time-slot" data-hour="9am">12-2 PM</div>
+                                    <div class="time-slot" data-hour="10am">2-4 PM</div>
+                                    <div class="time-slot" data-hour="11am">4-6 PM</div>
+                                    <div class="time-slot" data-hour="12pm">6-8 PM</div>
+                                    <div class="time-slot" data-hour="1pm">8-10 PM</div>
+                                    <div class="time-slot" data-hour="2pm">10-12 PM</div>
+                                </div>
+                            </div>
+                            <div class="day">
+                                <h3>Thursday</h3>
+                                <div class="time-slots">
+                                    <div class="time-slot" data-hour="7am">8-10 AM</div>
+                                    <div class="time-slot" data-hour="8am">10-12 PM</div>
+                                    <div class="time-slot" data-hour="9am">12-2 PM</div>
+                                    <div class="time-slot" data-hour="10am">2-4 PM</div>
+                                    <div class="time-slot" data-hour="11am">4-6 PM</div>
+                                    <div class="time-slot" data-hour="12pm">6-8 PM</div>
+                                    <div class="time-slot" data-hour="1pm">8-10 PM</div>
+                                    <div class="time-slot" data-hour="2pm">10-12 PM</div>
+                                </div>
+                            </div>
+                            <div class="day">
+                                <h3>Friday</h3>
+                                <div class="time-slots">
+                                    <div class="time-slot" data-hour="7am">8-10 AM</div>
+                                    <div class="time-slot" data-hour="8am">10-12 PM</div>
+                                    <div class="time-slot" data-hour="9am">12-2 PM</div>
+                                    <div class="time-slot" data-hour="10am">2-4 PM</div>
+                                    <div class="time-slot" data-hour="11am">4-6 PM</div>
+                                    <div class="time-slot" data-hour="12pm">6-8 PM</div>
+                                    <div class="time-slot" data-hour="1pm">8-10 PM</div>
+                                    <div class="time-slot" data-hour="2pm">10-12 PM</div>
+                                </div>
+                            </div>
+                            <div class="day">
+                                <h3>Saturday</h3>
+                                <div class="time-slots">
+                                    <div class="time-slot" data-hour="7am">8-10 AM</div>
+                                    <div class="time-slot" data-hour="8am">10-12 PM</div>
+                                    <div class="time-slot" data-hour="9am">12-2 PM</div>
+                                    <div class="time-slot" data-hour="10am">2-4 PM</div>
+                                    <div class="time-slot" data-hour="11am">4-6 PM</div>
+                                    <div class="time-slot" data-hour="12pm">6-8 PM</div>
+                                    <div class="time-slot" data-hour="1pm">8-10 PM</div>
+                                    <div class="time-slot" data-hour="2pm">10-12 PM</div>
+                                </div>
+                            </div>
+                            <div class="day">
+                                <h3>Sunday</h3>
+                                <div class="time-slots">
+                                    <div class="time-slot" data-hour="7am">8-10 AM</div>
+                                    <div class="time-slot" data-hour="8am">10-12 PM</div>
+                                    <div class="time-slot" data-hour="9am">12-2 PM</div>
+                                    <div class="time-slot" data-hour="10am">2-4 PM</div>
+                                    <div class="time-slot" data-hour="11am">4-6 PM</div>
+                                    <div class="time-slot" data-hour="12pm">6-8 PM</div>
+                                    <div class="time-slot" data-hour="1pm">8-10 PM</div>
+                                    <div class="time-slot" data-hour="2pm">10-12 PM</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <h2>Preferred Study Location</h2>
+                        <select id="preferredStudyLocation" required>
+                            <option value="">Select Location</option>
+                            <option value="north_reading_room">Main Library - North Reading Room</option>
+                            <option value="central_reading_room">Main Library - Central Reading Room</option>
+                            <option value="chemistry_library">Chemistry Library</option>
+                            <option value="wang_center">Charles B Wang Center</option>
+                            <option value="math_physics_astronomy_library">Mathematics/Physics/Astronomy Library</option>
+                            <option value="music_library">Music Library</option>
+                            <option value="health_sciences_library">Health Science Library</option>
+                            <option value="union">Union</option>
+                            <option value="flexible">Flexible</option>
+                            <option value="other">Other (Specify)</option>
+                        </select>
+
+                    <input type="text" id="otherLocationInput" placeholder="Other Location" style="display:none;" /> <!-- This appears if 'Other' is selected -->
+
+                    <h2>Short Bio or Study Goals</h2>
+                        <div class="textarea-container">
+                            <textarea id="bioTextarea" placeholder="Write a short bio or your study goals"></textarea>
+                            <div id="wordCount" class="word-count">50 words remaining</div>
+                        </div>
+
+                    <button type="button" onclick="window.location.href='file:///c:/Users/smehedi/Downloads/Study_Partner_C';">Find Study Partner</button>
+
+                </form>
+            </div>
+
+        <script>
+            
+            document.getElementById('bioTextarea').addEventListener('input', function () {
+                var maxLength = 50;
+                var words = this.value.match(/\b[-?(\w+)?]+\b/gi);
+                var numWords = words ? words.length : 0;
+                var wordsRemaining = maxLength - numWords;
+
+                if(wordsRemaining < 0){
+                    document.getElementById('wordCount').innerHTML = '<span style="color: red;">'+ Math.abs(wordsRemaining) +' words over limit</span>';
+                }else{
+                    document.getElementById('wordCount').innerHTML = wordsRemaining+' words remaining';
+                }
+            });
+
+            document.querySelectorAll('.weekly-schedule .day .time-slots .time-slot').forEach(function(slot) {
+                slot.addEventListener('click', function() {
+                    slot.classList.toggle('selected');
+                });
+            });
+
+            document.getElementById('preferredStudyLocation').addEventListener('change', function() {
+                var otherLocationInput = document.getElementById('otherLocationInput');
+                if (this.value === 'other') {
+                    otherLocationInput.style.display = 'block';
+                } else {
+                    otherLocationInput.style.display = 'none';
+                }
+            });
+
+            document.addEventListener('click', function(event) {
+                if (event.target.classList.contains('addCourseButton')) {
+                    var courseContainer = document.getElementById('courseInputs');
+                    var totalCourses = courseContainer.getElementsByClassName('courseInputContainer').length;
+
+                    if (totalCourses < 7) {
+                        var newDiv = document.createElement('div');
+                        newDiv.className = 'courseInputContainer';
+                        var newInput = document.createElement('input');
+                        newInput.type = 'text';
+                        newInput.name = 'course' + (totalCourses + 1);
+                        newInput.placeholder = 'Course ' + (totalCourses + 1);
+                        var newButton = document.createElement('button');
+                        newButton.type = 'button';
+                        newButton.className = 'addCourseButton';
+                        newButton.textContent = '+';
+
+                        newDiv.appendChild(newInput);
+                        newDiv.appendChild(newButton);
+                        courseContainer.appendChild(newDiv);
+
+                        event.target.style.display = 'none';
+                    }
+                }
+            });
+            document.getElementById('findStudyPartnerBtn').addEventListener('click', function(event) {
+                    event.preventDefault(); 
+
+                    const form = document.getElementById('userProfileForm');
+                    const formData = new FormData(form);
+
+                    fetch('http://localhost:3000/submit-profile', {
+                        method: 'POST',
+                        body: formData, 
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log(data);
+                        alert('Profile submitted successfully!');
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('There was an error submitting the profile: ' + error.message);
+                    });
+                });
+
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Info</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F0F2F5;
+            color: #333;
+        }
+        .profiles-container {
+            max-width: 960px;
+            margin: auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .title {
+            font-size: 36px;
+            color: #993800;
+            margin-bottom: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        .profile {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+        .profile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .profile-img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border: 4px solid #993800;
+        }
+        .profile-percentage {
+            color: #4CAF50;
+            margin-left: auto; 
+            font-size: 18px;
+            border-radius: 5px;
+            padding: 12px 23px;
+            font-weight: 600;
+        }
+        .profile-info {
+            text-align: left;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            font-size: 18px; 
+            line-height: 1.5; 
+        }
+        .profile-info label {
+            font-weight: bold;
+        }
+        .profile-actions {
+            display: flex;
+            justify-content: space-between; 
+        }
+        .btn, .profile-actions a {
+            padding: 10px 15px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            flex: 1; 
+            margin: 0 5px; 
+            text-align: center;
+        }
+        
+        .btn-view {
+            background-color: #993800;
+        }
+        .btn-message {
+            background-color: #28a745;
+        }
+        
+        .btn:hover, .profile-actions a:hover {
+            opacity: 0.9;
+        }
+        @media (max-width: 768px) {
+            .profile-actions {
+                flex-direction: column;
+            }
+            .btn, .profile-actions a {
+                width: auto; 
+                margin: 5px 0;
+            }
+        }
+        .schedule {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom: 20px; 
+        }
+
+        .day {
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+        }
+        .day h3 {
+            font-size: 18px;
+            color: #993800;
+            margin-bottom: 10px;
+        }
+        .time-slot {
+            display: block;
+            margin: 5px auto;
+            padding: 5px 10px;
+            background-color: #f0f2f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: fit-content;
+        }
+        .time-slot.selected {
+            background-color: #4CAF50;
+            color: white;
+            border-color: #3e8e41;
+        }
+        .time-slot:hover {
+            background-color: #e9e9e9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="profiles-container">
+    <div class="title">Profile Info</div>
+
+    <div class="profile">
+        <div class="profile-header">
+            <img src="file:///C:/Users/smehedi/Desktop/Saifur/Edward.jpg" alt="Profile Picture" class="profile-img">
+            <h2>Edward Yeboah</h2>
+            <span class="profile-percentage">67% Matched</span>
+        </div>
+        <div class="profile-info"><label>Major:</label> Information Systems</div>
+        <div class="profile-info"><label>Year:</label> Junior</div>
+        <div class="profile-info"><label>Spring 2024 Courses:</label> AMS 310, ISE 312, ISE 300, ISE 305, MUS 309</div>
+        <div class="profile-info"><label>Bio:</label> This is Edward! I'm looking for a study partner who's as enthusiastic as I am about pushing each other to excel in our studies. Let's support and motivate each other to reach our academic goals together!</div>
+        <div class="profile-info"><label>Preferred Study Location:</label> Union</div>
+        <div class="profile-info"><label>Preferred Study Time:</label> </div>
+        <div class="schedule">
+            <div class="day">
+                <h3>Monday</h3>
+                <div class="time-slot">8-10 AM</div>
+                <div class="time-slot">10-12 PM</div>
+                <div class="time-slot selected">12-2 PM</div>
+                <div class="time-slot selected">2-4 PM</div>
+                <div class="time-slot">4-6 PM</div>
+                <div class="time-slot">6-8 PM</div>
+                <div class="time-slot selected">8-10 PM</div>
+                <div class="time-slot selected">10-12 PM</div>
+            </div>
+            <div class="day">
+                <h3>Tuesday</h3>
+                <div class="time-slot">8-10 AM</div>
+                <div class="time-slot selected">10-12 PM</div>
+                <div class="time-slot ">12-2 PM</div>
+                <div class="time-slot  selected">2-4 PM</div>
+                <div class="time-slot">4-6 PM</div>
+                <div class="time-slot selected">6-8 PM</div>
+                <div class="time-slot ">8-10 PM</div>
+                <div class="time-slot ">10-12 PM</div>
+            </div>
+            <div class="day">
+                <h3>Wednesday</h3>
+                <div class="time-slot">8-10 AM</div>
+                <div class="time-slot">10-12 PM</div>
+                <div class="time-slot selected">12-2 PM</div>
+                <div class="time-slot selected">2-4 PM</div>
+                <div class="time-slot">4-6 PM</div>
+                <div class="time-slot">6-8 PM</div>
+                <div class="time-slot selected">8-10 PM</div>
+                <div class="time-slot selected">10-12 PM</div>
+            </div>
+            <div class="day">
+                <h3>Thursday</h3>
+                <div class="time-slot">8-10 AM</div>
+                <div class="time-slot selected">10-12 PM</div>
+                <div class="time-slot ">12-2 PM</div>
+                <div class="time-slot selected">2-4 PM</div>
+                <div class="time-slot">4-6 PM</div>
+                <div class="time-slot selected">6-8 PM</div>
+                <div class="time-slot ">8-10 PM</div>
+                <div class="time-slot ">10-12 PM</div>
+            </div>
+            <div class="day">
+                <h3>Friday</h3>
+                <div class="time-slot">8-10 AM</div>
+                <div class="time-slot selected">10-12 PM</div>
+                <div class="time-slot selected">12-2 PM</div>
+                <div class="time-slot selected">2-4 PM</div>
+                <div class="time-slot ">4-6 PM</div>
+                <div class="time-slot">6-8 PM</div>
+                <div class="time-slot ">8-10 PM</div>
+                <div class="time-slot ">10-12 PM</div>
+            </div>
+            <div class="day">
+                <h3>Saturday</h3>
+                <div class="time-slot">8-10 AM</div>
+                <div class="time-slot">10-12 PM</div>
+                <div class="time-slot ">12-2 PM</div>
+                <div class="time-slot ">2-4 PM</div>
+                <div class="time-slot">4-6 PM</div>
+                <div class="time-slot selected">6-8 PM</div>
+                <div class="time-slot selected">8-10 PM</div>
+                <div class="time-slot selected">10-12 PM</div>
+            </div>
+            <div class="day">
+                <h3>Sunday</h3>
+                <div class="time-slot">8-10 AM</div>
+                <div class="time-slot">10-12 PM</div>
+                <div class="time-slot ">12-2 PM</div>
+                <div class="time-slot ">2-4 PM</div>
+                <div class="time-slot">4-6 PM</div>
+                <div class="time-slot selected">6-8 PM</div>
+                <div class="time-slot selected">8-10 PM</div>
+                <div class="time-slot selected">10-12 PM</div>
+            </div>
+        </div>
+        <div class="profile-actions">
+            <a href="file:///c:/Users/smehedi/Downloads/Study_Partner_C" class="btn btn-view" style="text-decoration: none;">Back</a>
+            <button class="btn btn-message">Message</button>
+        </div>        
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.time-slot').forEach(slot => {
+        slot.addEventListener('click', () => {
+            slot.classList.toggle('selected');
+        });
+    });
+</script>
+    
+</body>
+</html>

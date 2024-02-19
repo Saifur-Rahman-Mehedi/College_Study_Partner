@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matched Study Partners</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F0F2F5;
+            color: #333;
+        }
+        .profiles-container {
+            max-width: 960px;
+            margin: auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .title {
+            font-size: 36px;
+            color: #993800;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        .profile {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+        .profile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .profile-img {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+            border: 4px solid #993800;
+        }
+        .profile-header h2 {
+            margin: 0;
+            font-weight: 600;
+            color: #993800;
+            flex-grow: 1;
+            text-align: left; 
+        }
+        .profile-percentage {
+            color: #4CAF50;
+            border-radius: 5px;
+            padding: 12px 23px;
+            font-weight: 600;
+        }
+        .profile-info {
+            text-align: left;
+            margin-bottom: 10px;
+            padding-left: 20px; 
+        }
+        .profile-info label {
+            font-weight: bold;
+        }
+        .profile-actions {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px; 
+        }
+        .btn, .profile-actions a {
+            padding: 10px 15px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            width: calc(50% - 10px); 
+            box-sizing: border-box;
+            background-color: #993800; 
+        }
+        .btn-message {
+            background-color: #28a745;
+        }
+        .btn:hover, .profile-actions a:hover {
+            opacity: 0.9;
+        }
+        @media (max-width: 768px) {
+            .profile-actions {
+                flex-direction: column;
+                gap: 5px; 
+            }
+            .btn, .profile-actions a {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="profiles-container">
+    <div class="title">Matched Study Partners</div>
+    
+
+    <div class="profile">
+        <div class="profile-header">
+            <img src="file:///C:/Users/smehedi/Desktop/Saifur/Alperen.jpeg" alt="Profile Picture" class="profile-img">
+            <h2>Alperen Gece</h2>
+            <span class="profile-percentage">83% Matched</span>
+        </div>
+        <div class="profile-info"><label>Major:</label> Computer Science</div>
+        <div class="profile-info"><label>Year:</label> Junior</div>
+        <div class="profile-info"><label>Spring 2024 Courses:</label> AMS 301, CSE 220, CSE 303, CSE 312, LIN 200</div>
+        <div class="profile-info"><label>Bio:</label> Hey, I'm Alperen, just checking out this new app for finding study partners. Let's see if we can sync up our schedules and conquer some courses together!</div>
+        <div class="profile-actions">
+            <a href="#" class="btn btn-view">View Full Profile</a>
+            <button class="btn btn-message">Message</button>
+        </div>
+    </div>
+
+    <div class="profile">
+        <div class="profile-header">
+            <img src="file:///C:/Users/smehedi/Desktop/Saifur/Edward.jpg" alt="Profile Picture" class="profile-img">
+            <h2>Edward Yeboah</h2>
+            <span class="profile-percentage">67% Matched</span>
+        </div>
+        <div class="profile-info"><label>Major:</label> Information Systems</div>
+        <div class="profile-info"><label>Year:</label> Junior</div>
+        <div class="profile-info"><label>Spring 2024 Courses:</label> AMS 310, ISE 312, ISE 300, ISE 305, MUS 309</div>
+        <div class="profile-info"><label>Bio:</label> This is Edward! I'm looking for a study partner who's as enthusiastic as I am about pushing each other to excel in our studies. Let's support and motivate each other to reach our academic goals together!</div>
+        <div class="profile-actions">
+            <a href="file:///c:/Users/smehedi/Downloads/Study_Partner_D" class="btn btn-view">View Full Profile</a>
+            <button class="btn btn-message">Message</button>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="profile-header">
+            <img src="file:///C:/Users/smehedi/Desktop/Saifur/Sadia.jpg" alt="Profile Picture" class="profile-img">
+            <h2>Sadia Supti</h2>
+            <span class="profile-percentage">41% Matched</span>
+        </div>
+        <div class="profile-info"><label>Major:</label> Biology</div>
+        <div class="profile-info"><label>Year:</label> Sophomore</div>
+        <div class="profile-info"><label>Spring 2024 Courses:</label> AFH 101, WRT 102, BIO 202, CHE 322, CHE 327</div>
+        <div class="profile-info"><label>Bio:</label> I'm Sadia, and I'm looking for a study partner who is willing to work together on our college courses. It would be great if you're patient and eager to learn with me, so we can do well in our studies together.</div>
+        <div class="profile-actions">
+            <a href="#" class="btn btn-view">View Full Profile</a>
+            <button class="btn btn-message">Message</button>
+        </div>
+    </div>
+
+    <div class="profile">
+        <div class="profile-header">
+            <img src="file:///C:/Users/smehedi/Desktop/Saifur/Rinat.jpg" alt="Profile Picture" class="profile-img">
+            <h2>Rinat Zaripullaev</h2>
+            <span class="profile-percentage">24% Matched</span>
+        </div>
+        <div class="profile-info"><label>Major:</label> Economics</div>
+        <div class="profile-info"><label>Year:</label> Freshman</div>
+        <div class="profile-info"><label>Spring 2024 Courses:</label> WRT 101, SBU 102, POL 102, ECO 108, AMT 125</div>
+        <div class="profile-info"><label>Bio:</label> Hi there! I'm Rinat, a freshman excited to make new friends on campus. Let's study and explore campus life together!</div>
+        <div class="profile-actions">
+            <a href="#" class="btn btn-view">View Full Profile</a>
+            <button class="btn btn-message">Message</button>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
